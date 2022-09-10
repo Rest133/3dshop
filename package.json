@@ -1,0 +1,18 @@
+{
+  "name": "3dshop",
+  "version": "0.0.1",
+  "description": "Try make shop from the beginning",
+  "main": "app.js",
+  "scripts": {
+
+  },
+  "keywords": [
+    "shop",
+    "3d-models",
+    "react",
+    "node.js",
+    "rest"
+  ],
+  "author": "Rest13",
+  "license": "ISC"
+}
