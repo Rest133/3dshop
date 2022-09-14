@@ -4,7 +4,8 @@
 const http = require('http'),
     fs = require('fs'),
     path = require('path'),
-    {simpleRouting} = require('./utils/routs')
+    {simpleRouting} = require('./utils/routs'),
+    {createConnectionToDB} = require('./utils/db')
 
 const server = http.createServer((req, res) => {
     res.setHeader('Content-Type', 'text/html')
@@ -20,4 +21,5 @@ server.on('request', (req, res) => {
 
 //Start server
 server.listen(3000, 'localhost')
+createConnectionToDB()
 console.log(`Server listening on localhost:3000...`)
