@@ -8,14 +8,13 @@ const http = require('http'),
 
 const server = http.createServer((req, res) => {
     res.setHeader('Content-Type', 'text/html')
-    res.write(simpleRouting(req.url))
-    res.end()
+    simpleRouting(req, res)
 })
 
 //Debug?
 server.on('request', (req, res) => {
-    console.log(req.url);
-    console.log(req.method);
+    console.log(req.url)
+    console.log(req.method)
     if (req.method === 'POST') console.log('POST method: ' + req.url)
 })
 

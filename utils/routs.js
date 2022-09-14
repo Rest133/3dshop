@@ -1,11 +1,13 @@
-function simpleRouting(url) {
-    switch (url) {
+const {sendPageFile} = require('./utils')
+
+function simpleRouting(req, res) {
+    switch (req.url) {
         case '/':
-            return '<h1>Index Page</h1>'
+            return sendPageFile(res, 'index')
         case '/product':
-            return '<h1>Product Page</h1>'
+            return sendPageFile(res, 'product')
         default:
-            return '<h1>Error 404 Page</h1>'
+            return sendPageFile(res, '404')
     }
 }
 
