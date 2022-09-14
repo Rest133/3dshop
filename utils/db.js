@@ -10,9 +10,7 @@ const clientConfig = {
 function createConnectionToDB() {
     const client = new Client(clientConfig)
     client.connect(err=>{
-        if(err){
-            console.log(`Error can't connect to db: ${err}`)
-        }
+        if(err)console.log(`Error can't connect to db: ${err}`)
         else console.log(`Connected to database`)
     })
 }

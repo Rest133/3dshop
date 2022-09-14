@@ -20,6 +20,6 @@ server.on('request', (req, res) => {
 })
 
 //Start server
-server.listen(3000, 'localhost')
+server.listen(3001, 'localhost')
 createConnectionToDB()
-console.log(`Server listening on localhost:3000...`)
+console.log(`Server listening on localhost:3001...`)
